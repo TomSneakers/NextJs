@@ -172,3 +172,40 @@ En diffusant en continu, vous pouvez empêcher les demandes de données lentes d
 
 Les morceaux sont rendus en parallèle, ce qui réduit le temps de chargement global
 L'un des avantages de cette approche est que vous pouvez réduire considérablement le temps de chargement global de votre page.
+
+## En général, qu'est-ce qui est considéré comme une bonne pratique lorsque l'on travaille avec Suspense et la récupération de données ?
+
+Déplacer les récupérations de données vers les composants qui en ont besoin
+En déplaçant la récupération des données vers les composants qui en ont besoin, vous pouvez créer des limites de Suspense plus granulaires. Cela vous permet de diffuser des composants spécifiques et d'empêcher le blocage de l'interface utilisateur.
+
+## Quels sont les trous dans le contexte du prérendu partiel ?
+
+Emplacements où le contenu dynamique sera chargé de manière asynchrone
+C'est exact! Les trous sont des emplacements où le contenu dynamique sera chargé de manière asynchrone au moment de la demande.
+
+## Pourquoi utiliser les paramètres de recherche d'URL ?
+
+Comme mentionné ci-dessus, vous utiliserez les paramètres de recherche d'URL pour gérer l'état de la recherche. Ce modèle peut être nouveau si vous avez l'habitude de le faire avec l'état côté client.
+
+L'implémentation de la recherche avec des paramètres d'URL présente quelques avantages :
+
+- **URL pouvant être mises en signet et partageables :** étant donné que les paramètres de recherche se trouvent dans l'URL, les utilisateurs peuvent ajouter l'état actuel de l'application à leurs favoris, y compris leurs requêtes de recherche et leurs filtres, pour référence ou partage ultérieur.
+- **Rendu côté serveur et chargement initial :** les paramètres d'URL peuvent être directement consommés sur le serveur pour restituer l'état initial, ce qui facilite la gestion du rendu du serveur.
+- **Analyse et suivi :** le fait d'avoir des requêtes de recherche et des filtres directement dans l'URL facilite le suivi du comportement des utilisateurs sans nécessiter de logique supplémentaire côté client.
+
+## L'anti-rebond
+
+L'anti-rebond est une pratique de programmation qui limite la vitesse à laquelle une fonction peut se déclencher. Dans notre cas, vous souhaitez interroger la base de données uniquement lorsque l'utilisateur a arrêté de taper.
+
+### Installation de use-debounce
+
+```bash
+npm i use-debounce
+```
+
+Cette fonction encapsulera le contenu de handleSearchet n'exécutera le code qu'après un temps spécifique une fois que l'utilisateur aura arrêté de taper (300 ms).
+
+## Quel problème l’anti-rebond résout-il dans la fonction de recherche ?
+
+Il empêche une nouvelle requête de base de données à chaque frappe
+C'est exact! L'anti-rebond empêche une nouvelle requête de base de données à chaque frappe, économisant ainsi des ressources.
