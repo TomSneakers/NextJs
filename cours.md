@@ -230,3 +230,64 @@ Le fichier « error.tsx » sert de fourre-tout pour les erreurs inattendues et v
 
 L'authentification vérifie votre identité. L'autorisation détermine ce à quoi vous pouvez accéder.
 C'est exact! Bien qu'elles semblent similaires, l'authentification vérifie votre identité tandis que l'autorisation détermine ce à quoi vous pouvez accéder.
+
+## Que sont les métadonnées ?
+
+Dans le développement Web, les métadonnées fournissent des détails supplémentaires sur une page Web. Les métadonnées ne sont pas visibles pour les utilisateurs visitant la page. Au lieu de cela, il fonctionne en coulisse, intégré au code HTML de la page, généralement au sein de l'`<head>`élément. Ces informations cachées sont cruciales pour les moteurs de recherche et autres systèmes qui doivent mieux comprendre le contenu de votre page Web.
+
+## Pourquoi les métadonnées sont-elles importantes ?
+
+Les métadonnées jouent un rôle important dans l'amélioration du référencement d'une page Web, la rendant plus accessible et compréhensible pour les moteurs de recherche et les plateformes de médias sociaux. Des métadonnées appropriées aident les moteurs de recherche à indexer efficacement les pages Web, améliorant ainsi leur classement dans les résultats de recherche. De plus, les métadonnées comme Open Graph améliorent l'apparence des liens partagés sur les réseaux sociaux, rendant le contenu plus attrayant et informatif pour les utilisateurs.
+
+## Types de métadonnées
+
+Il existe différents types de métadonnées, chacune ayant un objectif unique. Certains types courants incluent :
+**Métadonnées de titre :** responsables du titre d'une page Web affichée sur l'onglet du navigateur. C’est crucial pour le référencement car cela aide les moteurs de recherche à comprendre de quoi parle la page Web.
+
+```bash
+<title>Page Title</title>
+```
+
+**Description Métadonnées :** ces métadonnées fournissent un bref aperçu du contenu de la page Web et sont souvent affichées dans les résultats des moteurs de recherche.
+
+```bash
+<meta name="description" content="A brief description of the page content." />
+```
+
+**Métadonnées de mots-clés :** ces métadonnées incluent les mots-clés liés au contenu de la page Web, aidant les moteurs de recherche à indexer la page.
+
+```bash
+<meta name="keywords" content="keyword1, keyword2, keyword3" />
+```
+
+**Métadonnées Open Graph :** ces métadonnées améliorent la façon dont une page Web est représentée lorsqu'elle est partagée sur les plateformes de médias sociaux, en fournissant des informations telles que le titre, la description et l'image d'aperçu.
+
+```bash
+
+<meta property="og:title" content="Title Here" />
+<meta property="og:description" content="Description Here" />
+<meta property="og:image" content="image_url_here" />
+```
+
+**Métadonnées du favicon :** ces métadonnées relient le favicon (une petite icône) à la page Web, affichée dans la barre d'adresse ou l'onglet du navigateur.
+
+```bash
+<link rel="icon" href="path/to/favicon.ico" />
+```
+
+## Ajout de métadonnées
+
+Next.js dispose d'une API de métadonnées qui peut être utilisée pour définir les métadonnées de votre application. Il existe deux manières d'ajouter des métadonnées à votre application :
+
+- **Basé sur la configuration :** Exportez un objet statiquemetadata ou une generateMetadatafonction dynamique dans un fichier layout.jsou page.js.
+- **Basé sur des fichiers :** Next.js propose une gamme de fichiers spéciaux spécifiquement utilisés à des fins de métadonnées :
+
+  - favicon.ico, apple-icon.jpg, eticon.jpg : Utilisé pour les favicons et les icônes
+  - opengraph-image.jpget twitter-image.jpg: Employé pour les images des réseaux sociaux
+  - robots.txt : Fournit des instructions pour l'exploration des moteurs de recherche
+
+  - sitemap.xml: Offre des informations sur la structure du site Web
+
+Vous avez la possibilité d'utiliser ces fichiers pour des métadonnées statiques ou de les générer par programme au sein de votre projet.
+
+Avec ces deux options, Next.js générera automatiquement les <head>éléments pertinents pour vos pages.
