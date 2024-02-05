@@ -209,3 +209,14 @@ Cette fonction encapsulera le contenu de handleSearchet n'exécutera le code qu'
 
 Il empêche une nouvelle requête de base de données à chaque frappe
 C'est exact! L'anti-rebond empêche une nouvelle requête de base de données à chaque frappe, économisant ainsi des ressources.
+
+## Que sont les actions du serveur ?
+
+Les actions React Server vous permettent d'exécuter du code asynchrone directement sur le serveur. Ils éliminent le besoin de créer des points de terminaison d’API pour muter vos données. Au lieu de cela, vous écrivez des fonctions asynchrones qui s'exécutent sur le serveur et peuvent être invoquées à partir de vos composants client ou serveur.
+
+La sécurité est une priorité absolue pour les applications Web, car elles peuvent être vulnérables à diverses menaces. C'est là qu'interviennent les actions serveur. Elles offrent une solution de sécurité efficace, protégeant contre différents types d'attaques, sécurisant vos données et garantissant un accès autorisé. Les actions de serveur y parviennent grâce à des techniques telles que les requêtes POST, les fermetures chiffrées, les contrôles stricts des entrées, le hachage des messages d'erreur et les restrictions d'hôte, toutes travaillant ensemble pour améliorer considérablement la sécurité de votre application.
+
+## Quel est l'un des avantages de l'utilisation d'actions serveur ?
+
+Amélioration progressive.
+C'est exact! Cela permet aux utilisateurs d'interagir avec le formulaire et de soumettre des données même si le JavaScript du formulaire n'a pas encore été chargé ou s'il échoue.
