@@ -220,3 +220,13 @@ La sécurité est une priorité absolue pour les applications Web, car elles peu
 
 Amélioration progressive.
 C'est exact! Cela permet aux utilisateurs d'interagir avec le formulaire et de soumettre des données même si le JavaScript du formulaire n'a pas encore été chargé ou s'il échoue.
+
+## Quel fichier dans Next.js sert de fourre-tout pour les erreurs inattendues dans vos segments d'itinéraire ?
+
+Quel fichier dans Next.js sert de fourre-tout pour les erreurs inattendues dans vos segments d'itinéraire ?
+Le fichier « error.tsx » sert de fourre-tout pour les erreurs inattendues et vous permet d'afficher une interface utilisateur de secours à vos utilisateurs.
+
+## Lequel des énoncés suivants décrit le mieux la différence entre l’authentification et l’autorisation ?
+
+L'authentification vérifie votre identité. L'autorisation détermine ce à quoi vous pouvez accéder.
+C'est exact! Bien qu'elles semblent similaires, l'authentification vérifie votre identité tandis que l'autorisation détermine ce à quoi vous pouvez accéder.
