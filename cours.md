@@ -108,3 +108,67 @@ Les modules CSS créent des noms de classe uniques pour chaque composant, vous n
 
 Il héberge les fichiers de polices avec d'autres actifs statiques afin qu'il n'y ait aucune demande réseau supplémentaire.
 Next.js télécharge les fichiers de polices au moment de la construction et les héberge avec vos autres ressources statiques. Cela signifie que lorsqu'un utilisateur visite votre application, il n'y a pas de requêtes réseau supplémentaires pour les polices qui pourraient avoir un impact sur les performances.
+
+## Quel est le but du fichier de mise en page dans Next.js ?
+
+Pour partager l'interface utilisateur sur plusieurs pages
+C'est vrai, le fichier de mise en page est le meilleur moyen de créer une mise en page partagée que toutes les pages de votre application peuvent utiliser.
+
+## À quoi sert le `<Link>` composant dans Next.js ?
+
+Pour naviguer entre les pages sans rechargement de page
+Le composant `<Link>` est utilisé pour naviguer entre les pages de votre application sans recharger la page entière. Cela signifie que la navigation est plus rapide et plus fluide pour les utilisateurs.
+
+## Que fait Next.js lorsqu'un composant `<Link>` apparaît dans la fenêtre d'affichage du navigateur dans un environnement de production ?
+
+Pré-récupère le code de l'itinéraire lié
+Next.js préextrait automatiquement le code de l'itinéraire lié en arrière-plan. Au moment où l'utilisateur clique sur le lien, le code de la page de destination sera déjà chargé en arrière-plan, et c'est ce qui rend la transition de page quasi instantanée !
+
+## Qu'est-ce que l'amorçage dans le contexte des bases de données ?
+
+Remplir la base de données avec un ensemble initial de données
+C'est exact! L'amorçage est utile lorsque vous souhaitez disposer de données avec lesquelles travailler lors de la création de votre application.
+
+## Dans lequel de ces scénarios ne devriez-vous pas interroger directement votre base de données ?
+
+Lorsque vous récupérez des données sur le client
+C'est vrai, vous ne devez pas interroger votre base de données directement lors de la récupération des données sur le client, car cela exposerait les secrets de votre base de données.
+
+## Quel est l'avantage d'utiliser les composants React Server pour récupérer des données ?
+
+Ils vous permettent d'interroger la base de données directement depuis le serveur sans couche API supplémentaire.
+Les composants serveur vous permettent de récupérer des données directement à partir de votre base de données.
+
+## Qu'est-ce que SQL vous permet de faire en termes de récupération de données ?
+
+Récupérer et manipuler des données spécifiques
+SQL vous permet d'écrire des requêtes ciblées pour récupérer et manipuler des données spécifiques
+
+## Quand pourriez-vous vouloir utiliser un motif en cascade ?
+
+Pour satisfaire une condition avant de faire la prochaine demande
+Par exemple, vous souhaiterez peut-être d'abord récupérer l'ID et les informations de profil d'un utilisateur. Une fois que vous avez la pièce d’identité, vous pouvez alors procéder à la récupération de leur liste d’amis.
+
+## Qu’est-ce que le rendu dynamique ?
+
+Avec le rendu dynamique, le contenu est rendu sur le serveur pour chaque utilisateur au moment de la demande (lorsque l'utilisateur visite la page). Le rendu dynamique présente quelques avantages :
+
+- **Données** en temps réel - Le rendu dynamique permet à votre application d'afficher des données en temps réel ou fréquemment mises à jour. Ceci est idéal pour les applications où les données changent souvent.
+
+- **Contenu spécifique à l'utilisateur :** il est plus facile de proposer du contenu personnalisé, tel que des tableaux de bord ou des profils utilisateur, et de mettre à jour les données en fonction de l'interaction de l'utilisateur.
+- **Informations sur l'heure de la demande** Le rendu dynamique vous permet d'accéder à des informations qui ne peuvent être connues qu'au moment de la demande, telles que les cookies ou les paramètres de recherche d'URL.
+
+## Quel type d’informations ne peut être connu qu’au moment de la demande ?
+
+Cookies et paramètres de recherche d'URL
+
+## Qu’est-ce que le streaming ?
+
+Le streaming est une technique de transfert de données qui vous permet de diviser un itinéraire en « morceaux » plus petits et de les diffuser progressivement du serveur vers le client à mesure qu'ils sont prêts.
+
+En diffusant en continu, vous pouvez empêcher les demandes de données lentes de bloquer l'intégralité de votre page. Cela permet à l'utilisateur de voir et d'interagir avec des parties de la page sans attendre que toutes les données soient chargées avant qu'une interface utilisateur puisse être affichée à l'utilisateur.
+
+## Quel est l’avantage du streaming ?
+
+Les morceaux sont rendus en parallèle, ce qui réduit le temps de chargement global
+L'un des avantages de cette approche est que vous pouvez réduire considérablement le temps de chargement global de votre page.
