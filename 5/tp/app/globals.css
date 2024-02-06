@@ -28,3 +28,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-login {
+  background-color: #67cdcc;
+}
+
+.button-login {
+  background-color: #67cdcc;
+
+}
+
+.button-login:hover {
+  background-color: #000000 !important;
+  color: #67cdcc !important;
+}
