@@ -1,6 +1,6 @@
 
 import LoginForm from '@/app/ui/login-form';
-import Button from '@/app/ui/home/button';
+import Button from '@/app/ui/before/button';
 export default function LoginPage() {
   return (
     <main className="flex items-center justify-center md:h-screen bg-login">

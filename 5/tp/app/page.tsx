@@ -1,4 +1,4 @@
-import Button from "./ui/home/button";
+import Button from "./ui/before/button";
 
 export default function Home() {
   return (
@@ -30,8 +30,8 @@ export default function Home() {
                               <div className='cta-link'>connecter</div>
                             </div>
                           </div>
-                          <div>Sur l'application.</div>
-                          <Button href="/login" className="bouton-to-login" >Connection</Button>
+                            <div>Sur l&apos;application.</div>
+                          <Button href="/login" className="bouton-to-login" >Connexion</Button>
                         </h1>
                     </div>
                 </div>
