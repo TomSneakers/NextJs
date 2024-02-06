@@ -3,7 +3,7 @@ import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { signIn } from '@/auth';
+import { signIn } from '@/../auth';
 import { AuthError } from 'next-auth';
  
 const FormSchema = z.object({
