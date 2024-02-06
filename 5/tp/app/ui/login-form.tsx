@@ -16,7 +16,7 @@ export default function LoginForm() {
 
   return (
     <form action={dispatch} className="space-y-3">
-      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
+      <div className="flex-1 rounded-lg bg-white px-6 pb-4 pt-8">
         <h1 className={`${noto_sans.className} mb-3 text-2xl text-center`}>
           Connexion
         </h1>
