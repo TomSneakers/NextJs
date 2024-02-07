@@ -1,7 +1,7 @@
 'use server';
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
- 
+import { sql } from '@vercel/postgres';
 
  
 export async function authenticate(
@@ -20,5 +20,16 @@ export async function authenticate(
       }
     }
     throw error;
+  }
+}
+
+export async function getBooks() {
+  try {
+    const books = await sql`SELECT * FROM bibliotheque`;
+    return books.rows;
+  } 
+  catch (error) {
+    console.error('Failed to fetch books:', error);
+    throw new Error('Failed to fetch books.');
   }
 }
