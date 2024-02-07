@@ -20,7 +20,7 @@ export default async function Page({
     return (
       <div className="w-full">
         <div className="flex w-full items-center justify-between">
-          <h1 className={` text-2xl`}>Invoices</h1>
+          <h1 className="text-4xl top-1 left-4 relative ">LECTURE EN COURS</h1>
         </div>
         <Suspense key={query + currentPage }>
           <BooksTable query={query} currentPage={currentPage} />

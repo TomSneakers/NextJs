@@ -52,7 +52,7 @@ export async function fetchFilteredBooks(query: string, currentPage: number ) {
     ORDER BY title
     LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
 `;
-    console.log(test);
+
     try {
         const books = await sql<BookTable>`
             SELECT *

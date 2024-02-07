@@ -8,7 +8,7 @@ export default async function Page() {
     
   return (
     <main>
-      <h1 className={`${noto_sans.className} mb-4 text-xl md:text-2xl`}>
+      <h1 className="text-4xl top-1 left-4 relative">
         Dashboard
       </h1>
 
