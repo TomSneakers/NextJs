@@ -1,4 +1,4 @@
-import {User} from './definition';
+import {User} from './definitions';
 import { sql } from '@vercel/postgres';
 
 export async function getUser(email: string) {
