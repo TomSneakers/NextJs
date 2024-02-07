@@ -32,6 +32,12 @@ const bibliothque = [
   },
 ]
 
+module.exports = {
+  users,
+  bibliothque,
+};
+
+
 
 
 
