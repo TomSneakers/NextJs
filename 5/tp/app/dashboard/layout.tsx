@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="waveWrapperInner bgMiddle">
           <div className="wave waveMiddle" style={{backgroundImage: 'url("http://front-end-noobs.com/jecko/img/wave-mid.png")'}}></div>
         </div>
-        <div className="childrenWrapper children flex justify-center items-center h-screen">
+        <div className="childrenWrapper children justify-center items-center h-screen">
           {children}
         </div>
         <div className="waveWrapperInner bgBottom">

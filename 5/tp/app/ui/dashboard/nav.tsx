@@ -15,12 +15,12 @@ import { noto_sans} from '../fonts';
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
-    name: 'Invoices',
-    href: '/dashboard/te',
+    name: 'En cours',
+    href: '/dashboard/en-cours',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers',
-    href: '#', 
+  { name: 'Fini',
+    href: '/dashboard/fini', 
     icon: UserGroupIcon },
 ];
 

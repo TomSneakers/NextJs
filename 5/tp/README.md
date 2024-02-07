@@ -34,3 +34,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Description de l'application web
+
+Cette application est une application qui permet de suivre l'avancer de sa lecture, elle permettra d'ajouter des livres avec leur titre, auteur, nombre de pages et le nombre de pages lues. Elle permettra aussi de modifier les informations d'un livre et de supprimer un livre. Elle permettra aussi de voir le pourcentage de lecture de chaque livre.
