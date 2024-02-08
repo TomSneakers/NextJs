@@ -180,8 +180,8 @@ export async function createBook(prevState: State, formData: FormData) {
 export async function deleteBook(id: string) {
 
   try {
-    await sql`DELETE FROM invoices WHERE id = ${id}`;
-    revalidatePath('/dashboard/invoices');
+    await sql`DELETE FROM bibliotheque WHERE id = ${id}`;
+    revalidatePath('/dashboard/en-cours');
     return { message: 'Deleted Invoice.' };
   } catch (error) {
     return { message: 'Database Error: Failed to Delete Invoice.' };
