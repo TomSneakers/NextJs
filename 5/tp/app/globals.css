@@ -55,7 +55,7 @@
 .children {
   position: relative;
   z-index: 101;
-  height: 45rem;
+  height: 40rem;
   width: 80rem;
   top: 45%;
   left: 50%;
@@ -74,8 +74,7 @@
 
 
 .pagination-active {
-  background-color: #f9a8d4;
-  border: #f9a8d4;
+  background-color: #f889c466;
   color: white;
 }
 

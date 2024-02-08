@@ -83,7 +83,7 @@ export default function CreateBookForm() {
         {/* Cancel */}
         <Link href="/dashboard">
         <Button type="button" className="w-full mt-2" >
-          Cancel
+          Annuler
         </Button>
         </Link>
       </div>

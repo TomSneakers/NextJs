@@ -16,7 +16,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
     return (
         <div className="box-fini flow-root ">
             <div className="inline-block min-w-full align-middle">
-                <div className="rounded-lg bg-pink-300 p-2 md:pt-0">
+                <div className="rounded-lg p-2 md:pt-0" style={{backgroundColor: "#f889c466"}}>
                     <table className="min-w-full text-gray-900 md:table ">
                         <thead className="rounded-lg text-left text-sm font-normal ">
                             <tr>
@@ -34,7 +34,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
                                 </th>
                             </tr>
                         </thead>
-                        <tbody className=" bg-pink-300">
+                        <tbody className=" bg-pink-300" style={{color: "#86377b"}}>
                             {completedBooks.map((book) => {
                                 return (
                                     <tr key={book.id} className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">

@@ -96,7 +96,7 @@ export default function EditBookForm({ book }: { book: BookForm }) {
         {/* Cancel */}
         <Link href="/dashboard">
           <Button type="button" className="w-full mt-2" >
-          Cancel
+          Annulé
           </Button>
         </Link>
     </form>

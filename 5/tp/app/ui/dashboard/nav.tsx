@@ -1,20 +1,22 @@
 "use client";
 
 import {
-  UserGroupIcon,
-  HomeIcon,
+  
+  BookOpenIcon,
+  BookmarkSlashIcon,
+  
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { noto_sans} from '../fonts';
-import { PowerIcon } from '@heroicons/react/24/outline';
 import LogoutButton from '../before/logout';
-// Map of links to display in the top navigation.
+
+
 const links = [
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  { name: 'Fini', href: '/dashboard/fini', icon: UserGroupIcon },
+  { name: 'Accueil', href: '/dashboard', icon: BookOpenIcon },
+  { name: 'Fini', href: '/dashboard/fini', icon: BookmarkSlashIcon },
 ];
 
 export default function NavLinks() {

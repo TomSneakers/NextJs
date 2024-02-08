@@ -11,7 +11,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
     return (
         <div className="box-encours flow-root ">
             <div className="inline-block min-w-full align-middle">
-                <div className="rounded-lg bg-pink-300 p-2 md:pt-0">
+                <div className="rounded-lg p-2 md:pt-0" style={{backgroundColor: "#f889c466"}}>
                     <table className="min-w-full text-gray-900 md:table ">
                         <thead className="rounded-lg text-left text-sm font-normal ">
                             <tr>
@@ -30,7 +30,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
                                 
                             </tr>
                         </thead>
-                        <tbody className=" bg-pink-300">
+                        <tbody className=" bg-pink-300" style={{color: "#86377b"}}>
                             {books.map((book) => {
                                 const progression = ((book.nombredepagelue / book.nombredepage) * 100).toFixed(1); // Arrondir au dixième
                                 if (progression !== "100.0") {
