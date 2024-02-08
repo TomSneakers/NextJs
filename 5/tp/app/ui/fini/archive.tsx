@@ -2,6 +2,8 @@
 
 import { fetchFilteredBooks } from '@/app/lib/data';
 import CircularDeterminate from '../progressbar';
+import UpdateBook from './buttons-update';
+import DeleteBook from './buttons-delete';
 
 export default async function BooksTable({ query, currentPage }: { query: string; currentPage: number; }) {
     const books = await fetchFilteredBooks(query, currentPage);
@@ -40,6 +42,13 @@ export default async function BooksTable({ query, currentPage }: { query: string
                                         <td className="whitespace-nowrap px-4 py-3 sm:pl-6">{book.title}</td>
                                         <td className="whitespace-nowrap px-3 py-3">{book.auteur}</td>
                                         <td className="whitespace-nowrap px-3 py-3">{book.description.substring(0, 47)}...</td>
+                                        <td className="whitespace-nowrap px-3 py-3">
+                                            <UpdateBook id={book.id} />
+                                        </td>
+                                        <td className="whitespace-nowrap px-3 py-3">
+                                            <DeleteBook id={book.id} />
+                                        </td>
+                                        
                                     </tr>
                                 );
                             })}
