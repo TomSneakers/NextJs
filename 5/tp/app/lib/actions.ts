@@ -48,9 +48,13 @@ const FormSchema = z.object({
   description: z.string({
     invalid_type_error: 'Please enter a description.',
   }),
-  nombredepage: z.number(),
+  nombredepage: z.coerce
+    .number()
+    .gt(0, { message: 'Please enter an amount greater than $0.' }),
 
-  nombredepagelue:z.number(),
+  nombredepagelue: z.coerce
+    .number()
+    .gt(0, { message: 'Please enter an amount greater than $0.' }),
 });
 
 export type State = {
@@ -59,8 +63,8 @@ export type State = {
     auteur?: string[];
     title?: string[];
     description?: string[];
-    nombredepagelue?: number[];
-    nombredepage?: number[];
+    nombredepagelue?: string[];
+    nombredepage?: string[];
   };
   message?: string | null;
 };
@@ -126,9 +130,13 @@ const FormSchema1 = z.object({
   description: z.string({
     invalid_type_error: 'Please enter a description.',
   }),
-  nombredepage: z.number(),
-    
-  nombredepagelue: z.number(),
+  nombredepage: z.coerce
+    .number()
+    .gt(0, { message: 'Please enter an amount greater than $0.' }),
+
+  nombredepagelue: z.coerce
+    .number()
+    .gt(0, { message: 'Please enter an amount greater than $0.' }),
 });
 
 
