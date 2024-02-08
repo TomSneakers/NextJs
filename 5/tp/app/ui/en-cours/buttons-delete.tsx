@@ -15,3 +15,4 @@ export default function DeleteBook({ id }: { id: string }) {
     </form>
   );
 }
+
