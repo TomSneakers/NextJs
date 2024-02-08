@@ -9,7 +9,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
     const books = await fetchFilteredBooks(query, currentPage);
 
     return (
-        <div className="mt-10 flow-root ">
+        <div className="box-encours flow-root ">
             <div className="inline-block min-w-full align-middle">
                 <div className="rounded-lg bg-pink-300 p-2 md:pt-0">
                     <table className="min-w-full text-gray-900 md:table ">

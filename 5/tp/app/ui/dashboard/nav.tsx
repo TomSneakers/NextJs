@@ -3,25 +3,19 @@
 import {
   UserGroupIcon,
   HomeIcon,
-  DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { noto_sans} from '../fonts';
+import LogoutButton from '../before/logout';``
+
 
 // Map of links to display in the top navigation.
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  {
-    name: 'En cours',
-    href: '/dashboard/en-cours',
-    icon: DocumentDuplicateIcon,
-  },
-  { name: 'Fini',
-    href: '/dashboard/fini', 
-    icon: UserGroupIcon },
+  { name: 'Fini', href: '/dashboard/fini', icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
@@ -35,7 +29,6 @@ export default function NavLinks() {
               {/* Your logo or site name can be placed here */}
               <Image src="/logo.png" alt="Logo" width={50} height={50} />
               <h1 className={`${noto_sans.className} text-white ml-2 text-lg`} >TITRE</h1>
-
             </div>
           </div>
           <div className="flex items-center">
@@ -43,6 +36,7 @@ export default function NavLinks() {
               <Link
                 key={link.name}
                 href={link.href}
+                passHref
                 className={clsx(
                   'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium',
                   {
@@ -56,6 +50,7 @@ export default function NavLinks() {
               </Link>
             ))}
           </div>
+          <LogoutButton />
         </div>
       </div>
     </nav>

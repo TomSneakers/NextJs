@@ -79,6 +79,35 @@
   color: white;
 }
 
+.box-encours {
+  margin-top: 100px;
+}
+
+.box-fini {
+  margin-top: 150px;
+}
+
+.create-form {
+  margin-top: 130px;
+}
+
+.input-create {
+  box-shadow: 5px 5px 15px 5px #0000004d;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.label-create {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+
+.form-edit {
+  margin-top: 130px;
+
+}
+
 /* Bar de recherche */
 .search-input {
   box-shadow: 5px 5px 15px 5px #0000004d;
@@ -87,14 +116,106 @@
   position: relative;
   left: 47%;
   background: transparent;
+  top: 80px;
 }
 
 .peer {
   background: transparent;
   border: none;
-  color: white;
 }
 
+.button-create {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  box-shadow: 5px 5px 15px 5px #0000004d;
+  color: #9ca3af
+}
+
+.button-create:hover {
+  background-color: #f9a8d4;
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Titre de la page */
+.box1 {
+  width: 600px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: absolute;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  top: -150px;
+  left: -90px;
+}
+
+.wave1 {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #f9a8d4;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave1.-three1 {
+  animation: drift 14000ms infinite linear;
+}
+
+.wave1.-two1 {
+  animation: drift 16000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+}
+
+.box1:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+.title1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 390px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
 
 
 

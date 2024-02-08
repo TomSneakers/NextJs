@@ -14,7 +14,7 @@ export default async function BooksTable({ query, currentPage }: { query: string
     });
 
     return (
-        <div className="mt-10 flow-root ">
+        <div className="box-fini flow-root ">
             <div className="inline-block min-w-full align-middle">
                 <div className="rounded-lg bg-pink-300 p-2 md:pt-0">
                     <table className="min-w-full text-gray-900 md:table ">

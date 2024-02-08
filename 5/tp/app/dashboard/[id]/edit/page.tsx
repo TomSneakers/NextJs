@@ -14,16 +14,12 @@ export default async function Page({ params }: { params: { id: string } }) {
   }
   return (
     <main>
-      <Breadcrumbs
-        breadcrumbs={[
-          { label: 'Invoices', href: '/dashboard/invoices' },
-          {
-            label: 'Edit Invoice',
-            href: `/dashboard/invoices/${id}/edit`,
-            active: true,
-          },
-        ]}
-      />
+      <div className='box1'>
+              <div className='wave1 -one1'></div>
+              <div className='wave1 -two1'></div>
+              <div className='wave1 -three1'></div>
+              <div className='title1'>Ajouter</div>
+      </div>
       <Form book={book} />
     </main>
   );

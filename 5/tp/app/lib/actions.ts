@@ -111,8 +111,8 @@ try {
 }
 
  
-  revalidatePath('/dashboard/en-cours');
-  redirect('/dashboard/en-cours');
+  revalidatePath('/dashboard/');
+  redirect('/dashboard/');
 }
 
 
@@ -171,8 +171,8 @@ export async function createBook(prevState: State, formData: FormData) {
     return { message: 'Database Error: Failed to Create Invoice.' };
   }
 
-  revalidatePath('/dashboard/en-cours');
-  redirect('/dashboard/en-cours');
+  revalidatePath('/dashboard');
+  redirect('/dashboard');
 }
 
 
@@ -181,8 +181,8 @@ export async function deleteBook(id: string) {
 
   try {
     await sql`DELETE FROM bibliotheque WHERE id = ${id}`;
-    revalidatePath('/dashboard/en-cours');
-    return { message: 'Deleted Invoice.' };
+    revalidatePath('/dashboard');
+    return { message: 'Deleted Book.' };
   } catch (error) {
     return { message: 'Database Error: Failed to Delete Invoice.' };
   }

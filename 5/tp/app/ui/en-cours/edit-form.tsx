@@ -4,6 +4,7 @@ import { BookForm } from '@/app/lib/definitions';
 import { Button } from '@/app/ui/button';
 import { updateBook } from '@/app/lib/actions';
 import { useFormState } from 'react-dom';
+import Link from 'next/link';
 
 export default function EditBookForm({ book }: { book: BookForm }) {
   
@@ -15,11 +16,11 @@ export default function EditBookForm({ book }: { book: BookForm }) {
 
   
   return (
-    <form action={dispatch}>
-      <div className="rounded-md bg-gray-50 p-4 md:p-6">
+    <form action={dispatch} className='form-edit'>
+      <div className="rounded-md bg-pink-300 p-4 md:p-6">
         {/* Book Title */}
-        <div className="mb-4">
-          <label htmlFor="title" className="mb-2 block text-sm font-medium">
+        <div className="mb-4 input-create">
+          <label htmlFor="title" className="ml-3 mt-1 label-create  mb-2 block text-sm font-medium">
             Title
           </label>
           <input
@@ -27,13 +28,13 @@ export default function EditBookForm({ book }: { book: BookForm }) {
             name="title"
             type="text"
             defaultValue={book.title}
-            className="block w-full rounded-md border border-gray-200 py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full rounded-md bg-transparent py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
 
         {/* Book Author */}
-        <div className="mb-4">
-          <label htmlFor="auteur" className="mb-2 block text-sm font-medium">
+        <div className="mb-4 input-create">
+          <label htmlFor="auteur" className="ml-3 mt-1 label-create mb-2 block text-sm font-medium">
             Author
           </label>
           <input
@@ -41,26 +42,26 @@ export default function EditBookForm({ book }: { book: BookForm }) {
             name="auteur"
             type="text"
             defaultValue={book.auteur}
-            className="block w-full rounded-md border border-gray-200 py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full rounded-md bg-transparent py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
 
         {/* Book Description */}
-        <div className="mb-4">
-          <label htmlFor="description" className="mb-2 block text-sm font-medium">
+        <div className="mb-4 input-create">
+          <label htmlFor="description" className="ml-3 mt-1 label-create mb-2 block text-sm font-medium">
             Description
           </label>
           <textarea
             id="description"
             name="description"
             defaultValue={book.description}
-            className="block w-full rounded-md border border-gray-200 py-2 px-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full rounded-md bg-transparent py-2 px-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
 
         {/* Book Page Count */}
-        <div className="mb-4">
-          <label htmlFor="nombredepage" className="mb-2 block text-sm font-medium">
+        <div className="mb-4 input-create">
+          <label htmlFor="nombredepage" className="ml-3 mt-1 label-create mb-2 block text-sm font-medium">
             Page Count
           </label>
           <input
@@ -68,13 +69,13 @@ export default function EditBookForm({ book }: { book: BookForm }) {
             name="nombredepage"
             type="number"
             defaultValue={book.nombredepage}
-            className="block w-full rounded-md border border-gray-200 py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full rounded-md bg-transparent py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
 
         {/* Book Pages Read Count */}
-        <div className="mb-4">
-          <label htmlFor="nombredepagelue" className="mb-2 block text-sm font-medium">
+        <div className="mb-4 input-create">
+          <label htmlFor="nombredepagelue" className="ml-3 mt-1 label-create mb-2 block text-sm font-medium">
             Pages Read
           </label>
           <input
@@ -82,21 +83,22 @@ export default function EditBookForm({ book }: { book: BookForm }) {
             name="nombredepagelue"
             type="number"
             defaultValue={book.nombredepagelue}
-            className="block w-full rounded-md border border-gray-200 py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full rounded-md bg-transparent py-2 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
       </div>
       {/* Form Actions */}
-      <div className="mt-6 flex justify-end gap-4">
-        <button
-          type="button"
-          onClick={() => window.history.back()}
-          className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
-        >
+
+        {/* Submit Button */}
+        <Button type="submit" className="w-full">
+          Modifier le livre
+        </Button>
+        {/* Cancel */}
+        <Link href="/dashboard">
+          <Button type="button" className="w-full mt-2" >
           Cancel
-        </button>
-        <Button type="submit">Edit Book</Button>
-      </div>
+          </Button>
+        </Link>
     </form>
   );
 }
