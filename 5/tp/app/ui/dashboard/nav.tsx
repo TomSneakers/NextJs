@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   UserGroupIcon,
@@ -9,9 +9,8 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { noto_sans} from '../fonts';
-import LogoutButton from '../before/logout';``
-
-
+import { PowerIcon } from '@heroicons/react/24/outline';
+import LogoutButton from '../before/logout';
 // Map of links to display in the top navigation.
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
@@ -50,7 +49,9 @@ export default function NavLinks() {
               </Link>
             ))}
           </div>
-          <LogoutButton />
+          <div className="flex items-center">
+            <LogoutButton />
+          </div>
         </div>
       </div>
     </nav>
