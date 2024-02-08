@@ -8,17 +8,11 @@ export type User = {
     email: string;
     password: string;
   };
-  
-  export type Customer = {
-    id: string;
-    name: string;
-    email: string;
-    image_url: string;
-  };
-  
+
   
   export type LatestBook = {
     id: string;
+    title: string;
     name: string;
     description: string;
     nombredepage: number;

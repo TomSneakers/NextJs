@@ -2,6 +2,8 @@
 
 import { fetchFilteredBooks } from '@/app/lib/data';
 import CircularDeterminate from '../progressbar';
+import UpdateBook from './buttons-update';
+import DeleteBook from './buttons-delete';
 
 export default async function BooksTable({ query, currentPage }: { query: string; currentPage: number; }) {
     const books = await fetchFilteredBooks(query, currentPage);
@@ -25,19 +27,30 @@ export default async function BooksTable({ query, currentPage }: { query: string
                                 <th scope="col" className="px-3 py-5 font-medium">
                                     Description
                                 </th>
+                                
                             </tr>
                         </thead>
                         <tbody className=" bg-pink-300">
                             {books.map((book) => {
                                 const progression = ((book.nombredepagelue / book.nombredepage) * 100).toFixed(1); // Arrondir au dixième
-                                return (
-                                    <tr key={book.id} className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
-                                        <td className="whitespace-nowrap px-4 py-3 sm:pl-6"><CircularDeterminate progress={Number(progression)} /></td>
-                                        <td className="whitespace-nowrap px-4 py-3 sm:pl-6">{book.title}</td>
-                                        <td className="whitespace-nowrap px-3 py-3">{book.auteur}</td>
-                                        <td className="whitespace-nowrap px-3 py-3">{book.description.substring(0, 47)}...</td>
-                                    </tr>
-                                );
+                                if (progression !== "100.0") {
+                                    return (
+                                        <tr key={book.id} className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
+                                            <td className="whitespace-nowrap px-4 py-3 sm:pl-6"><CircularDeterminate progress={Number(progression)} /></td>
+                                            <td className="whitespace-nowrap px-4 py-3 sm:pl-6">{book.title}</td>
+                                            <td className="whitespace-nowrap px-3 py-3">{book.auteur}</td>
+                                            <td className="whitespace-nowrap px-3 py-3">{book.description.substring(0, 47)}...</td>
+                                            <td className="whitespace-nowrap px-3 py-3">
+                                            <UpdateBook id={book.id} />
+                                            </td>
+                                            <td className="whitespace-nowrap px-3 py-3">
+                                            <DeleteBook id={book.id} />
+                                            </td>
+                                        </tr>
+                                    );
+                                } else {
+                                    return null; // Exclure les livres avec une progression de 100%
+                                }
                             })}
                         </tbody>
                     </table>

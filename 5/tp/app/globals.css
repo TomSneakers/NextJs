@@ -55,8 +55,8 @@
 .children {
   position: relative;
   z-index: 101;
-  height: 40rem;
-  width: 70rem;
+  height: 45rem;
+  width: 80rem;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -71,6 +71,30 @@
 .css-1rn30mb-MuiCircularProgress-root {
   color: #86377b;
 }
+
+
+.pagination-active {
+  background-color: #f9a8d4;
+  border: #f9a8d4;
+  color: white;
+}
+
+/* Bar de recherche */
+.search-input {
+  box-shadow: 5px 5px 15px 5px #0000004d;
+  width: 50%;
+  border-radius: 50px;
+  position: relative;
+  left: 47%;
+  background: transparent;
+}
+
+.peer {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
 
 
 

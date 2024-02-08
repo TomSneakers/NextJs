@@ -37,7 +37,7 @@ export async function fetchLatestBooks(): Promise<LatestBookRaw[]> { // Renommé
 
 
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 7;
 
 export async function fetchFilteredBooks(query: string, currentPage: number ) {
     noStore();

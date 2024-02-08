@@ -13,7 +13,7 @@ const bibliotheque = [
     id: '1',
     title: 'Le seigneur des anneaux',
     nombredepage: '1000',
-    nombredepagelue: '10',
+    nombredepagelue: '1000',
     auteur: 'J.R.R. Tolkien',
     description: 'Le Seigneur des anneaux est un roman en trois volumes de J. R. R. Tolkien, paru en 1954 et 1955. Lhistoire reprend certains des personnages du Hobbit, bien que ce ne soit pas une suite directe. Elle se situe dans un monde imaginaire nommé la Terre du Milieu, et suit la quête de lanneau de pouvoir forgé par le Seigneur Sombre Sauron.'
   },

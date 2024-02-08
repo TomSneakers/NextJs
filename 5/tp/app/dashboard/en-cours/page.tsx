@@ -4,6 +4,8 @@ import BooksTable from "@/app/ui/en-cours/archive";
 import Pagination from "@/app/ui/en-cours/pagination";
 import { Suspense } from 'react';
 import { fetchBooksPages } from '@/app/lib/data';
+import Search from "@/app/ui/search";
+import CreateBook from "@/app/ui/en-cours/button-create";
 
 export default async function Page({
     searchParams,
@@ -21,7 +23,10 @@ export default async function Page({
       <div className="w-full">
         <div className="flex w-full items-center justify-between">
           <h1 className="text-4xl top-1 left-4 relative ">LECTURE EN COURS</h1>
+          <CreateBook />
         </div>
+        <Search />
+
         <Suspense key={query + currentPage }>
           <BooksTable query={query} currentPage={currentPage} />
         </Suspense>
